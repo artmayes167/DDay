@@ -107,6 +107,7 @@
 		9F7E544B1BF295A6008391AB /* NDDatePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NDDatePicker.xib; sourceTree = "<group>"; };
 		9F7E54671BF295F3008391AB /* DDay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DDay-Bridging-Header.h"; sourceTree = "<group>"; };
 		9F7E54691BF299A6008391AB /* CommonDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefines.h; sourceTree = "<group>"; };
+		9F7E546B1BF29D3E008391AB /* NDConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDConstant.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +140,7 @@
 		9F7E53DF1BF294F9008391AB /* DDay */ = {
 			isa = PBXGroup;
 			children = (
+				9F7E546A1BF29D3E008391AB /* Constant */,
 				9F7E53FA1BF295A6008391AB /* HelplerUtilities */,
 				9F7E544A1BF295A6008391AB /* LogInViewController.swift */,
 				9F7E544B1BF295A6008391AB /* NDDatePicker.xib */,
@@ -371,6 +373,14 @@
 				9F7E54691BF299A6008391AB /* CommonDefines.h */,
 			);
 			path = CommonDefines;
+			sourceTree = "<group>";
+		};
+		9F7E546A1BF29D3E008391AB /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				9F7E546B1BF29D3E008391AB /* NDConstant.h */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
