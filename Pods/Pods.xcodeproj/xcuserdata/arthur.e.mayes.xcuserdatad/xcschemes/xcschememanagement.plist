@@ -4,30 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DDay.xcscheme</key>
+		<key>EasyAnimation.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
-		<key>DDayWatch.xcscheme</key>
+		<key>Pods-DDay.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>3</integer>
 		</dict>
-		<key>Notification - DDayWatch.xcscheme</key>
+		<key>Pods.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9F7E53DC1BF294F9008391AB</key>
+		<key>133ADFFE3075672D1612117B0268E1E6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9F7E54731BF2A536008391AB</key>
+		<key>316F7E5E791B7C8B50A1029B664285AA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>92EBF76A5FA5329A207D369A44B29AEC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
