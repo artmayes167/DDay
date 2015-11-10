@@ -50,17 +50,17 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        
-        var pass = emailTextField.text == defaults.valueForKey("email") as? String
-        if pass {
-            pass = passwordTextField.text == defaults.valueForKey("password") as? String
-        }
-        if pass {
+//        let defaults = NSUserDefaults.standardUserDefaults()
+//        
+//        var pass = emailTextField.text == defaults.valueForKey("email") as? String
+//        if pass {
+//            pass = passwordTextField.text == defaults.valueForKey("password") as? String
+//        }
+//        if pass {
             shouldLogIn = true
 //            self.performSegueWithIdentifier("unwindToRegistration", sender: self)
             self.dismissViewControllerAnimated(true, completion: nil)
-        }
+//        }
     }
 
     /*
