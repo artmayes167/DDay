@@ -9,10 +9,25 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>DDayWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Notification - DDayWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>9F7E53DC1BF294F9008391AB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9F7E54731BF2A536008391AB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
