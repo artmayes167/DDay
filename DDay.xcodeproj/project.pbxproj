@@ -52,6 +52,7 @@
 		9F7E548C1BF2A537008391AB /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E548B1BF2A537008391AB /* NotificationController.swift */; };
 		9F7E548E1BF2A537008391AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E548D1BF2A537008391AB /* Assets.xcassets */; };
 		9F7E54921BF2A537008391AB /* DDayWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9F7E54741BF2A536008391AB /* DDayWatch.app */; };
+		9F7E549C1BF2B6E3008391AB /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E549B1BF2B6E3008391AB /* RootTabBarController.swift */; };
 		AE989B2D43E63895D0B410DC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348869A9747B87ECEEAD643D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -179,6 +180,7 @@
 		9F7E548B1BF2A537008391AB /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		9F7E548D1BF2A537008391AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F7E548F1BF2A537008391AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F7E549B1BF2B6E3008391AB /* RootTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 				9F7E546C1BF29E84008391AB /* DealerCollectionViewController.swift */,
 				9F7E546E1BF29EBE008391AB /* FinancialPlansViewController.swift */,
 				9F7E54701BF29EEF008391AB /* MapDealerViewController.swift */,
+				9F7E549B1BF2B6E3008391AB /* RootTabBarController.swift */,
 			);
 			path = DDay;
 			sourceTree = "<group>";
@@ -729,6 +732,7 @@
 				9F7E54631BF295A6008391AB /* MMIndicatorView.m in Sources */,
 				9F7E545B1BF295A6008391AB /* UIViewController+HelperUtilities.m in Sources */,
 				9F7E54551BF295A6008391AB /* UIImage+ImageEffects.m in Sources */,
+				9F7E549C1BF2B6E3008391AB /* RootTabBarController.swift in Sources */,
 				9F7E544C1BF295A6008391AB /* NSManagedObject+NDAppManagedObject.m in Sources */,
 				9F7E544F1BF295A6008391AB /* NSObject+HelperUtility.m in Sources */,
 				9F7E54651BF295A6008391AB /* LogInViewController.swift in Sources */,

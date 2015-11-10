@@ -6,10 +6,10 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Root Tab Bar Controller-->
         <scene sceneID="L6Z-Jk-MDh">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="oRD-Ow-NI8" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="oRD-Ow-NI8" customClass="RootTabBarController" customModule="DDay" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="qg4-mC-EwO">
                         <autoresizingMask key="autoresizingMask"/>
@@ -19,6 +19,7 @@
                         <segue destination="Icz-W6-hAq" kind="relationship" relationship="viewControllers" id="mIk-ww-C0a"/>
                         <segue destination="P2U-gA-xB2" kind="relationship" relationship="viewControllers" id="fP2-MV-cyr"/>
                         <segue destination="yj1-cB-fO2" kind="relationship" relationship="viewControllers" id="wS6-iV-jYT"/>
+                        <segue destination="Y8y-6Z-8Xs" kind="presentation" identifier="toLogIn" modalTransitionStyle="flipHorizontal" id="wcx-OW-m1n"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ncn-er-1FB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -67,7 +68,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bulb" translatesAutoresizingMaskIntoConstraints="NO" id="M5c-uK-15O">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="construction" translatesAutoresizingMaskIntoConstraints="NO" id="M5c-uK-15O">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkK-J8-utO">
@@ -89,12 +90,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZb-BG-njf">
-                                <rect key="frame" x="180" y="200" width="240" height="200"/>
+                                <rect key="frame" x="180" y="190" width="240" height="220"/>
                                 <subviews>
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UhR-pH-S83">
-                                        <rect key="frame" x="20" y="20" width="200" height="160"/>
+                                        <rect key="frame" x="20" y="20" width="200" height="180"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eZ8-Uq-FU6">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="160"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </view>
                                         <blurEffect style="light"/>
@@ -155,7 +156,7 @@
                                     <constraint firstItem="UhR-pH-S83" firstAttribute="leading" secondItem="fZb-BG-njf" secondAttribute="leading" constant="20" id="PKp-Rk-7Yi"/>
                                     <constraint firstAttribute="trailing" secondItem="huD-K9-u2u" secondAttribute="trailing" constant="8" id="Tk0-sn-Aah"/>
                                     <constraint firstItem="UhR-pH-S83" firstAttribute="centerX" secondItem="fZb-BG-njf" secondAttribute="centerX" id="UwT-3M-d6X"/>
-                                    <constraint firstAttribute="height" constant="200" id="Ymd-pm-6Hr"/>
+                                    <constraint firstAttribute="height" constant="220" id="Ymd-pm-6Hr"/>
                                     <constraint firstItem="V4Z-Xx-giW" firstAttribute="top" secondItem="huD-K9-u2u" secondAttribute="bottom" constant="21" id="YtT-oq-i9q"/>
                                     <constraint firstItem="huD-K9-u2u" firstAttribute="leading" secondItem="fZb-BG-njf" secondAttribute="leading" constant="8" id="Yxm-CY-5XK"/>
                                     <constraint firstItem="UhR-pH-S83" firstAttribute="top" secondItem="fZb-BG-njf" secondAttribute="top" constant="20" id="cdE-ep-ne4"/>
@@ -195,6 +196,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bulb" width="42" height="42"/>
+        <image name="construction" width="120" height="120"/>
     </resources>
 </document>

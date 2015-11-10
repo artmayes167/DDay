@@ -58,7 +58,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         }
         if pass {
             shouldLogIn = true
-            self.performSegueWithIdentifier("unwindToRegistration", sender: self)
+//            self.performSegueWithIdentifier("unwindToRegistration", sender: self)
+            self.dismissViewControllerAnimated(true, completion: nil)
         }
     }
 
