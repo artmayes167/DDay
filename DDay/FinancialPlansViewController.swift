@@ -8,12 +8,23 @@
 
 import UIKit
 
-class FinancialPlansViewController: UIViewController {
+class FinancialPlansViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewWidth: NSLayoutConstraint!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.prepareInterface()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +32,31 @@ class FinancialPlansViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+        coordinator.animateAlongsideTransition({ (UIViewControllerTransitionCoordinatorContext) -> Void in
+            self.view.layoutIfNeeded()
+            }, completion: nil)
+    }
+    
+    func prepareInterface() {
+        self.tableViewWidth.constant = self.view.frame.size.width / 3
+        self.view.layoutIfNeeded()
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell")!
+        
+        return cell
+    }
 
     /*
     // MARK: - Navigation

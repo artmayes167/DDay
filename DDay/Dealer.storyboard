@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="854" y="531"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Dealer Collection View Controller-->
         <scene sceneID="oY0-qA-FZ9">
             <objects>
-                <collectionViewController id="olu-3h-XlM" customClass="CollectionViewController" sceneMemberID="viewController">
+                <collectionViewController id="olu-3h-XlM" customClass="DealerCollectionViewController" customModule="DDay" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="w8h-pq-kE3">
                         <rect key="frame" x="0.0" y="0.0" width="584" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

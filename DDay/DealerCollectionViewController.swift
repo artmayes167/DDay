@@ -8,18 +8,21 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "basic"
 
-class DealerCollectionViewController: UICollectionViewController {
+class DealerCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    
+    var size : CGSize = CGSizeZero
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.size = (UIApplication.sharedApplication().delegate?.window!!.frame.size)!
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -27,6 +30,14 @@ class DealerCollectionViewController: UICollectionViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+        self.size = size
+        coordinator.animateAlongsideTransition({ (UIViewControllerTransitionCoordinatorContext) -> Void in
+            self.collectionView?.performBatchUpdates(nil, completion: nil)
+            }, completion: nil)
     }
 
     /*
@@ -42,14 +53,12 @@ class DealerCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        return 10
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -58,6 +67,10 @@ class DealerCollectionViewController: UICollectionViewController {
         // Configure the cell
     
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake((self.size.width - 30)/2, 80)
     }
 
     // MARK: UICollectionViewDelegate
