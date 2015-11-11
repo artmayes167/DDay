@@ -4,7 +4,7 @@
 //
 //  Created by Mayes, Arthur E. on 11/10/15.
 //  Copyright © 2015 Mayes, Arthur E. All rights reserved.
-//
+//  http://www.techotopia.com/index.php/An_Example_Swift_iOS_8_MKMapItem_Application
 
 import UIKit
 import MapKit
@@ -24,15 +24,23 @@ class Store: NSObject, MKAnnotation {
     }
 }
 
-class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
-
+class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UISearchBarDelegate {
+    
+    // -- outlets
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mapView: MKMapView!
+    
+    // - vars
     lazy var locationManager: CLLocationManager = {
         let manager = CLLocationManager()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         return manager
     }()
+    
+    let geoCoder = CLGeocoder()
+    
+    let regionRadius: CLLocationDistance = 1000
     
     
     override func viewDidLoad() {
@@ -68,6 +76,26 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
     }
     */
 
+    // MARK: - Helpers
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+            regionRadius * 2.0, regionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func displayInFlyoverMode() {
+        mapView.mapType = .SatelliteFlyover
+        mapView.showsBuildings = true
+        let location = CLLocationCoordinate2D(latitude: 39.9522, longitude: -75.1640233)
+        let altitude: CLLocationDistance  = 500
+        let heading: CLLocationDirection = 90
+        let pitch = CGFloat(45)
+        let camera = MKMapCamera(lookingAtCenterCoordinate: location, fromDistance: altitude, pitch: pitch, heading: heading)
+        mapView.setCamera(camera, animated: true)
+    }
+    
+    
+    
     // MARK: - CLLocationManagerDelegate
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -88,17 +116,46 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         }
     }
     
-    func displayInFlyoverMode() {
-        mapView.mapType = .SatelliteFlyover
-        mapView.showsBuildings = true
-        let location = CLLocationCoordinate2D(latitude: 39.9522, longitude: -75.1640233)
-        let altitude: CLLocationDistance  = 500
-        let heading: CLLocationDirection = 90
-        let pitch = CGFloat(45)
-        let camera = MKMapCamera(lookingAtCenterCoordinate: location, fromDistance: altitude, pitch: pitch, heading: heading)
-        mapView.setCamera(camera, animated: true)
+    
+    
+    
+    
+    
+    
+    
+    // MARK: UISearchBarDelegate
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        //print(searchText)
     }
     
-    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+       // print(searchBar.text)
+        
+        
+        
+        self.geoCoder.geocodeAddressString(self.searchBar.text!) { (placemarks, error) -> Void in
+            
+            if error != nil {
+                print("Geocode failed with error: \(error!.localizedDescription)")
+            } else if placemarks?.count > 0 {
+                
+                print(placemarks![0])
+                
+                /*
+                
+                let point = MKPointAnnotation()
+                let placemark = placemarks![0] as! MKPlacemark
+ 
+                point.coordinate = placemark.coordinate;
+                point.title = "Sample Location";
+                point.subtitle = "Sample Subtitle";
+                */
+                
+                
+            }
+            
+            
+        }
+    }
     
 }
