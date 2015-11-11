@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9CFBC12B1BF2BF7B00982C98 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFBC12A1BF2BF7B00982C98 /* MapKit.framework */; };
 		9F7E53E11BF294F9008391AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E53E01BF294F9008391AB /* AppDelegate.swift */; };
 		9F7E53E31BF294F9008391AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E53E21BF294F9008391AB /* ViewController.swift */; };
 		9F7E53E81BF294F9008391AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E53E71BF294F9008391AB /* Assets.xcassets */; };
@@ -103,6 +104,7 @@
 		348869A9747B87ECEEAD643D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56FB01D753156968A261B695 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6D9600C345C59CB9EC8202EA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9CFBC12A1BF2BF7B00982C98 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9F7E53DD1BF294F9008391AB /* DDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7E53E01BF294F9008391AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F7E53E21BF294F9008391AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -594,10 +596,15 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
-				ORGANIZATIONNAME = "Mayes, Arthur E.";
+				ORGANIZATIONNAME = Accenture;
 				TargetAttributes = {
 					9F7E53DC1BF294F9008391AB = {
 						CreatedOnToolsVersion = 7.1.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					9F7E54731BF2A536008391AB = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -988,6 +995,7 @@
 				9F7E54961BF2A537008391AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F7E54991BF2A537008391AB /* Build configuration list for PBXNativeTarget "DDayWatch" */ = {
 			isa = XCConfigurationList;
@@ -996,6 +1004,7 @@
 				9F7E54941BF2A537008391AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
