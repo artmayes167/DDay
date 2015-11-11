@@ -58,6 +58,7 @@
 		9F7E54A01BF3CA73008391AB /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E549F1BF3CA73008391AB /* defaults.plist */; };
 		9F7E54A11BF3CA73008391AB /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E549F1BF3CA73008391AB /* defaults.plist */; };
 		9F7E54A21BF3CA73008391AB /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E549F1BF3CA73008391AB /* defaults.plist */; };
+		9FDB7ED51BF3EC7F004A8BAB /* empty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FDB7ED41BF3EC7F004A8BAB /* empty.storyboard */; };
 		AE989B2D43E63895D0B410DC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348869A9747B87ECEEAD643D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -189,6 +190,7 @@
 		9F7E549B1BF2B6E3008391AB /* RootTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		9F7E549D1BF2BCF0008391AB /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		9F7E549F1BF3CA73008391AB /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaults.plist; sourceTree = "<group>"; };
+		9FDB7ED41BF3EC7F004A8BAB /* empty.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = empty.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,7 +259,6 @@
 			isa = PBXGroup;
 			children = (
 				9F7E53FA1BF295A6008391AB /* HelplerUtilities */,
-				9F7E544A1BF295A6008391AB /* LogInViewController.swift */,
 				9F7E544B1BF295A6008391AB /* NDDatePicker.xib */,
 				9F7E53F81BF2953A008391AB /* Main.storyboard */,
 				9F7E53F21BF29525008391AB /* Dealer.storyboard */,
@@ -269,11 +270,13 @@
 				9F7E53E91BF294F9008391AB /* LaunchScreen.storyboard */,
 				9F7E53EC1BF294F9008391AB /* Info.plist */,
 				9F7E54671BF295F3008391AB /* DDay-Bridging-Header.h */,
+				9F7E544A1BF295A6008391AB /* LogInViewController.swift */,
 				9F7E546C1BF29E84008391AB /* DealerCollectionViewController.swift */,
 				9F7E546E1BF29EBE008391AB /* FinancialPlansViewController.swift */,
 				9F7E54701BF29EEF008391AB /* MapDealerViewController.swift */,
 				9F7E549B1BF2B6E3008391AB /* RootTabBarController.swift */,
 				9F7E549F1BF3CA73008391AB /* defaults.plist */,
+				9FDB7ED41BF3EC7F004A8BAB /* empty.storyboard */,
 			);
 			path = DDay;
 			sourceTree = "<group>";
@@ -647,6 +650,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F7E54A01BF3CA73008391AB /* defaults.plist in Resources */,
+				9FDB7ED51BF3EC7F004A8BAB /* empty.storyboard in Resources */,
 				9F7E53F61BF29525008391AB /* FinancialPlans.storyboard in Resources */,
 				9F7E53F71BF29525008391AB /* Map.storyboard in Resources */,
 				9F7E53EB1BF294F9008391AB /* LaunchScreen.storyboard in Resources */,
