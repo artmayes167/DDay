@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class LogInViewController: UIViewController, UITextFieldDelegate {
 
@@ -14,12 +15,16 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
-    var shouldLogIn = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.testFingerprint()
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,25 +47,87 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func logIn(sender : AnyObject) {
         
-        if emailTextField.text == "" || passwordTextField.text == "" {
-            let alert = UIAlertController.init(title: "Oops", message: "Please complete all fields to continue", preferredStyle: UIAlertControllerStyle.Alert)
-            let action = UIAlertAction.init(title: "Okay", style: UIAlertActionStyle.Cancel, handler: nil)
-            alert.addAction(action)
-            self.presentViewController(alert, animated: true, completion: nil)
-            return
-        }
+//        if emailTextField.text == "" || passwordTextField.text == "" {
+//            let alert = UIAlertController.init(title: "Oops", message: "Please complete all fields to continue", preferredStyle: UIAlertControllerStyle.Alert)
+//            let action = UIAlertAction.init(title: "Okay", style: UIAlertActionStyle.Cancel, handler: nil)
+//            alert.addAction(action)
+//            self.presentViewController(alert, animated: true, completion: nil)
+//            return
+//        }
         
-//        let defaults = NSUserDefaults.standardUserDefaults()
-//        
-//        var pass = emailTextField.text == defaults.valueForKey("email") as? String
-//        if pass {
-//            pass = passwordTextField.text == defaults.valueForKey("password") as? String
-//        }
-//        if pass {
-            shouldLogIn = true
-//            self.performSegueWithIdentifier("unwindToRegistration", sender: self)
+        var valid = true
+//        valid = emailTextField.text?.containsString("@")
+        
+        if valid {
             self.dismissViewControllerAnimated(true, completion: nil)
+        } else {
+//            let alert = UIAlertController.init(title: "Oops", message: "Please input a valid email address", preferredStyle: UIAlertControllerStyle.Alert)
+//            let action = UIAlertAction.init(title: "Okay", style: UIAlertActionStyle.Cancel, handler: nil)
+//            alert.addAction(action)
+//            self.presentViewController(alert, animated: true, completion: nil)
+//            return
+        }
 //        }
+    }
+    
+    func testFingerprint() {
+        let context = LAContext()
+        var error : NSError?
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            if context.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: &error) {
+                context.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason:"Authenticate for user log in", reply: { (success, err) -> Void in
+                    if (err != nil) {
+                        
+                        var failureReason = ""
+                        switch err!.code {
+                        case LAError.AuthenticationFailed.rawValue:
+                            failureReason = "Authentication failed"
+                        case LAError.UserCancel.rawValue:
+                            failureReason = ""
+                        case LAError.SystemCancel.rawValue:
+                            failureReason = "system canceled authentication"
+                        case LAError.PasscodeNotSet.rawValue:
+                            failureReason = "passcode not set"
+                        case LAError.UserFallback.rawValue:
+                            failureReason = ""
+                        default:
+                            failureReason = "Unable to authenticate user"
+                        }
+                        
+                        if failureReason != "" {
+                            let alert = UIAlertController.init(title: "Oops", message: "validation failed: \(failureReason).", preferredStyle: UIAlertControllerStyle.Alert)
+                            let action = UIAlertAction.init(title: "Try Again", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) -> Void in
+                                self.testFingerprint()
+                            })
+                            let action2 = UIAlertAction.init(title: "Okay", style: UIAlertActionStyle.Cancel, handler: nil)
+                            alert.addAction(action)
+                            alert.addAction(action2)
+                            self.presentViewController(alert, animated: true, completion: nil)
+                        }
+                        
+                    } else if success {
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    }
+                })
+            }  else {
+                //get more information
+                var reason = "Local Authentication not available"
+                switch error!.code {
+                case LAError.TouchIDNotAvailable.rawValue:
+                    reason = "Touch ID not available on device"
+                case LAError.TouchIDNotEnrolled.rawValue:
+                    reason = "Touch ID is not enrolled yet"
+                case LAError.PasscodeNotSet.rawValue:
+                    reason = "Passcode not set"
+                default: reason = "Authentication not available"
+                }
+                
+                let alert = UIAlertController.init(title: "Error", message: "Touch ID fingerprint authentication is not available: \(reason).", preferredStyle: UIAlertControllerStyle.Alert)
+                let action2 = UIAlertAction.init(title: "Okay", style: UIAlertActionStyle.Cancel, handler: nil)
+                alert.addAction(action2)
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+        }
     }
 
     /*
