@@ -8,15 +8,47 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 
-class MapDealerViewController: UIViewController {
+class Store: NSObject, MKAnnotation {
+    var title: String?
+    var coordinate: CLLocationCoordinate2D
+    var info: String
+    
+    init(title: String, coordinate: CLLocationCoordinate2D, info: String) {
+        self.title = title
+        self.coordinate = coordinate
+        self.info = info
+    }
+}
+
+class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
+    lazy var locationManager: CLLocationManager = {
+        let manager = CLLocationManager()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        return manager
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.requestWhenInUseAuthorization()
 
-        // Do any additional setup after loading the view.
+    
+        
+        
+        let washington = Store(title: "Washington DC", coordinate: CLLocationCoordinate2D(latitude: 38.895111, longitude: -77.036667), info: "Named after George himself.")
+        
+        mapView.addAnnotation(washington)
+        
+        
+        self.displayInFlyoverMode()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,4 +67,37 @@ class MapDealerViewController: UIViewController {
     }
     */
 
+    // MARK: - CLLocationManagerDelegate
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            print("Current location: \(location)")
+        } else {
+            // ...
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("Error finding location: \(error.localizedDescription)")
+    }
+    
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        if case .AuthorizedWhenInUse = status {
+            manager.requestLocation()
+        }
+    }
+    
+    func displayInFlyoverMode() {
+        mapView.mapType = .SatelliteFlyover
+        mapView.showsBuildings = true
+        let location = CLLocationCoordinate2D(latitude: 39.9522, longitude: -75.1640233)
+        let altitude: CLLocationDistance  = 500
+        let heading: CLLocationDirection = 90
+        let pitch = CGFloat(45)
+        let camera = MKMapCamera(lookingAtCenterCoordinate: location, fromDistance: altitude, pitch: pitch, heading: heading)
+        mapView.setCamera(camera, animated: true)
+    }
+    
+    
+    
 }
