@@ -25,10 +25,10 @@ class RootTabBarController: UITabBarController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-//        if shouldShowLogIn {
-//            self.performSegueWithIdentifier("toLogIn", sender: self)
-//            shouldShowLogIn = false
-//        }
+        if shouldShowLogIn {
+            self.performSegueWithIdentifier("toLogIn", sender: self)
+            shouldShowLogIn = false
+        }
     }
     
 
