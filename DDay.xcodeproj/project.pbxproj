@@ -53,6 +53,7 @@
 		9F7E548E1BF2A537008391AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E548D1BF2A537008391AB /* Assets.xcassets */; };
 		9F7E54921BF2A537008391AB /* DDayWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9F7E54741BF2A536008391AB /* DDayWatch.app */; };
 		9F7E549C1BF2B6E3008391AB /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E549B1BF2B6E3008391AB /* RootTabBarController.swift */; };
+		9F7E549E1BF2BCF0008391AB /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7E549D1BF2BCF0008391AB /* EventKit.framework */; };
 		AE989B2D43E63895D0B410DC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348869A9747B87ECEEAD643D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -181,6 +182,7 @@
 		9F7E548D1BF2A537008391AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F7E548F1BF2A537008391AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F7E549B1BF2B6E3008391AB /* RootTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		9F7E549D1BF2BCF0008391AB /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F7E549E1BF2BCF0008391AB /* EventKit.framework in Frameworks */,
 				AE989B2D43E63895D0B410DC /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +217,7 @@
 		8F3A5C1AF939148AA7553B29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F7E549D1BF2BCF0008391AB /* EventKit.framework */,
 				348869A9747B87ECEEAD643D /* Pods.framework */,
 			);
 			name = Frameworks;

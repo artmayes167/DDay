@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EventKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -40,7 +41,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        self.displayMessage(notification.alertBody!, title: notification.alertTitle!, actionTitle: notification.alertAction!)
+    }
+    
+    /**
+     Display an Alert Message
+     */
+    func displayMessage(message: NSString, title: NSString, actionTitle: NSString) {
+        let alert = UIAlertController.init(title: title as String, message: message as String, preferredStyle: UIAlertControllerStyle.Alert)
+        let action = UIAlertAction.init(title: actionTitle as String, style: UIAlertActionStyle.Cancel, handler: nil)
+        alert.addAction(action)
+        let vc = self.window?.rootViewController
+        vc!.presentViewController(alert, animated: true, completion: nil)
+    }
 
 
+}
+
+extension AppDelegate {
+    
+    func createEvent(title: String, startDate : NSDate, endDate: NSDate, allDay: Bool, alertTime: NSTimeInterval, task: String) {
+        let eventStore = EKEventStore()
+        let event = EKEvent(eventStore: eventStore)
+        
+        event.title = title;
+        event.startDate = startDate;
+        event.endDate = endDate;
+        event.allDay = allDay;
+        
+        if alertTime != 0 {
+            let alarm = EKAlarm.init(relativeOffset: alertTime)
+            event.alarms = [alarm]
+        }
+        
+        eventStore.requestAccessToEntityType(EKEntityType.Event) {granted, error in
+            if (error != nil) {
+                
+            } else if !granted {
+                
+            } else {
+                event.calendar = eventStore.defaultCalendarForNewEvents
+                do {
+                    try eventStore.saveEvent(event, span: .ThisEvent)
+                } catch {
+                    print("Event Save Failed")
+                }
+            }
+        }
+        
+    }
 }
 
