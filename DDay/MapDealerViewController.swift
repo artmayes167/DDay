@@ -157,15 +157,39 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         
         
         let localSearch = MKLocalSearch(request: localSearchRequest)
-        localSearch.startWithCompletionHandler { (response, error) -> Void in
-            let resultsArray = response?.mapItems
-            print("search results:\(resultsArray?.count)")
+        localSearch.startWithCompletionHandler { (searchResponse, error) -> Void in
+            // make sure placeArray is more than 0
+            guard let placeArray = searchResponse?.mapItems where searchResponse?.mapItems.count > 0 else {
+                return
+            }
+            
+            self.mapView.setRegion(searchRegion, animated: true)
             
             
-        }
+            for place:MKMapItem in placeArray {
+                print("place:\(place)")
+                let point = MKPointAnnotation()
+                if let placeCoordinate = place.placemark.location?.coordinate {
+                    point.coordinate = placeCoordinate
+                }
+                point.title = place.name
+                point.subtitle = place.phoneNumber
+                self.mapView.addAnnotation(point)
+                
+                
+                
+            }
+            
+            
+    
+            
+            
+            
+            
+        } // end local search completion block
         
         
-        
+        /*
         
         self.geoCoder.geocodeAddressString(self.searchBar.text!) { (placemarks, error) -> Void in
             
@@ -174,7 +198,7 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
             } else if placemarks?.count > 0 {
                 
                 //print(placemarks![0])
-                print ("location.count:\(placemarks!.count)")
+                //print ("location.count:\(placemarks!.count)")
                 
                 let placemark = placemarks!.first as! CLPlacemark!
                 let point = MKPointAnnotation()
@@ -197,7 +221,7 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
             }
             
             
-        }
+        } */
     }
     
     func milesToMeters(miles: Double) -> Double {
