@@ -4,7 +4,9 @@
 //
 //  Created by Mayes, Arthur E. on 11/10/15.
 //  Copyright © 2015 Mayes, Arthur E. All rights reserved.
-//  http://www.techotopia.com/index.php/An_Example_Swift_iOS_8_MKMapItem_Application
+//
+//  https://www.appsfoundation.com/post/map-kit-ios-9-custom-pins-transit-mode-3d-flyover-mode
+//  http://nshipster.com/ios9/
 
 import UIKit
 import MapKit
@@ -48,8 +50,8 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         
         self.locationManager.requestWhenInUseAuthorization()
 
-        //self.locationManager.requestLocation()
-        self.mapView.showsUserLocation = true
+        self.mapView.showsUserLocation = true  // we will also use mapview delegate to do a 3d flyby into user
+        //self.mapView.setUserTrackingMode(MKUserTrackingMode.Follow, animated: true)
         
         
         /*
@@ -84,16 +86,6 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-    func displayInFlyoverMode() {
-        mapView.mapType = .SatelliteFlyover
-        mapView.showsBuildings = true
-        let location = CLLocationCoordinate2D(latitude: 39.9522, longitude: -75.1640233)
-        let altitude: CLLocationDistance  = 500
-        let heading: CLLocationDirection = 90
-        let pitch = CGFloat(45)
-        let camera = MKMapCamera(lookingAtCenterCoordinate: location, fromDistance: altitude, pitch: pitch, heading: heading)
-        mapView.setCamera(camera, animated: true)
-    }
     
     func flyByToLocation(location:CLLocation) {
         mapView.mapType = .SatelliteFlyover
@@ -135,10 +127,11 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
     
     // MARK: - MapView
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
-        self.flyByToLocation(userLocation.location!)
+        //self.flyByToLocation(userLocation.location!)
     }
-    
-    
+    func mapViewDidStopLocatingUser(mapView: MKMapView) {
+        self.flyByToLocation(mapView.userLocation.location!)
+    }
     
     
     // MARK: UISearchBarDelegate
@@ -153,7 +146,23 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         // http://stackoverflow.com/questions/10417022/how-to-get-multiple-placemarks-from-clgeocoder
         let localSearchRequest = MKLocalSearchRequest()
         localSearchRequest.naturalLanguageQuery = self.searchBar.text
-        //localSearchRequest.region = MKCoordinateRegionMakeWithDistance(loc, kSearchMapBoundingBoxDistanceInMetres, kSearchMapBoundingBoxDistanceInMetres);
+        // http://stackoverflow.com/questions/5025339/how-to-make-mapview-zoom-to-5-mile-radius-of-current-location
+        
+        let searchRegion = MKCoordinateRegionMakeWithDistance(self.mapView.userLocation.location!.coordinate  , milesToMeters(5.0), milesToMeters(5.0))
+        //let searchRegion = MKCoordinateRegionMakeWithDistance(self.mapView.userLocation.location!.coordinate  , 5.0/69.0, 5.0/69.0)
+        
+        //mapView.setRegion(searchRegion, animated: true)
+        
+        localSearchRequest.region = searchRegion
+        
+        
+        let localSearch = MKLocalSearch(request: localSearchRequest)
+        localSearch.startWithCompletionHandler { (response, error) -> Void in
+            let resultsArray = response?.mapItems
+            print("search results:\(resultsArray?.count)")
+            
+            
+        }
         
         
         
@@ -173,7 +182,7 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
                 point.title = "Sample Location";
                 point.subtitle = "Sample Subtitle";
                 
-                print("point: \(point)")
+                //print("point: \(point)")
                 
                 
                 let pointLocation = CLLocation(latitude: (placemark.location?.coordinate.latitude)!, longitude: (placemark.location?.coordinate.longitude)!)
@@ -189,6 +198,12 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
             
             
         }
+    }
+    
+    func milesToMeters(miles: Double) -> Double {
+    // 1 mile is 1609.344 meters
+    // source: http://www.google.com/search?q=1+mile+in+meters
+    return 1609.344 * miles;
     }
     
 }
