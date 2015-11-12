@@ -46,17 +46,18 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        locationManager.requestWhenInUseAuthorization()
+        self.locationManager.requestWhenInUseAuthorization()
 
-    
+        //self.locationManager.requestLocation()
+        self.mapView.showsUserLocation = true
         
         
-        let washington = Store(title: "Washington DC", coordinate: CLLocationCoordinate2D(latitude: 38.895111, longitude: -77.036667), info: "Named after George himself.")
+        /*
+        //let washington = Store(title: "Washington DC", coordinate: CLLocationCoordinate2D(latitude: 38.895111, longitude: -77.036667), info: "Named after George himself.")
         
-        mapView.addAnnotation(washington)
+        //mapView.addAnnotation(washington)
+        */
         
-        
-        self.displayInFlyoverMode()
         
     }
 
@@ -94,6 +95,17 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         mapView.setCamera(camera, animated: true)
     }
     
+    func flyByToLocation(location:CLLocation) {
+        mapView.mapType = .SatelliteFlyover
+        mapView.showsBuildings = true
+        let altitude: CLLocationDistance  = 500
+        let heading: CLLocationDirection = 90
+        let pitch = CGFloat(45)
+        let camera = MKMapCamera(lookingAtCenterCoordinate: location.coordinate, fromDistance: altitude, pitch: pitch, heading: heading)
+        mapView.setCamera(camera, animated: true)
+        
+    }
+    
     
     
     // MARK: - CLLocationManagerDelegate
@@ -101,6 +113,9 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             print("Current location: \(location)")
+            
+            self.flyByToLocation(location)
+            
         } else {
             // ...
         }
@@ -118,7 +133,10 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
     
     
     
-    
+    // MARK: - MapView
+    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+        self.flyByToLocation(userLocation.location!)
+    }
     
     
     
@@ -132,6 +150,13 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
        // print(searchBar.text)
         
         
+        // http://stackoverflow.com/questions/10417022/how-to-get-multiple-placemarks-from-clgeocoder
+        let localSearchRequest = MKLocalSearchRequest()
+        localSearchRequest.naturalLanguageQuery = self.searchBar.text
+        //localSearchRequest.region = MKCoordinateRegionMakeWithDistance(loc, kSearchMapBoundingBoxDistanceInMetres, kSearchMapBoundingBoxDistanceInMetres);
+        
+        
+        
         
         self.geoCoder.geocodeAddressString(self.searchBar.text!) { (placemarks, error) -> Void in
             
@@ -139,17 +164,25 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
                 print("Geocode failed with error: \(error!.localizedDescription)")
             } else if placemarks?.count > 0 {
                 
-                print(placemarks![0])
+                //print(placemarks![0])
+                print ("location.count:\(placemarks!.count)")
                 
-                /*
-                
+                let placemark = placemarks!.first as! CLPlacemark!
                 let point = MKPointAnnotation()
-                let placemark = placemarks![0] as! MKPlacemark
- 
-                point.coordinate = placemark.coordinate;
+                point.coordinate = placemark.location!.coordinate
                 point.title = "Sample Location";
                 point.subtitle = "Sample Subtitle";
-                */
+                
+                print("point: \(point)")
+                
+                
+                let pointLocation = CLLocation(latitude: (placemark.location?.coordinate.latitude)!, longitude: (placemark.location?.coordinate.longitude)!)
+                //self.centerMapOnLocation(pointLocation)
+                
+                self.mapView.centerCoordinate = point.coordinate
+                
+                
+                self.mapView.addAnnotation(point)
                 
                 
             }
