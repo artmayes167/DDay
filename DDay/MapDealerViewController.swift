@@ -49,7 +49,9 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         super.viewDidLoad()
         
         self.locationManager.requestWhenInUseAuthorization()
-
+        self.mapView.showsCompass = true
+        self.mapView.showsTraffic = true
+        self.mapView.showsScale = true
         self.mapView.showsUserLocation = true  // we will also use mapview delegate to do a 3d flyby into user
         //self.mapView.setUserTrackingMode(MKUserTrackingMode.Follow, animated: true)
         
