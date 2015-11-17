@@ -206,8 +206,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98b-hB-VEb">
-                                        <rect key="frame" x="-8" y="198" width="255" height="40"/>
-                                        <animations/>
+                                        <rect key="frame" x="8" y="198" width="223" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="98b-hB-VEb" secondAttribute="height" multiplier="325:51" id="a6P-rg-J9Q"/>
                                             <constraint firstAttribute="height" constant="35" id="yHZ-6d-YHt"/>
