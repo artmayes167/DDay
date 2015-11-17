@@ -102,7 +102,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                             let action2 = UIAlertAction.init(title: "Okay", style: UIAlertActionStyle.Cancel, handler: nil)
                             alert.addAction(action)
                             alert.addAction(action2)
-                            self.presentViewController(alert, animated: true, completion: nil)
+                            //self.presentViewController(alert, animated: true, completion: nil)
+                            self.performSegueWithIdentifier("backToMainUnwind", sender: self)
                         }
                         
                     } else if success {
@@ -139,5 +140,18 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func segueForUnwindingToViewController(toViewController: UIViewController, fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
+        if let id = identifier{
+            if id == "backToMainUnwind" {
+                let unwindSegue = FirstCustomSegueUnwind(identifier: id, source: fromViewController, destination: toViewController, performHandler: { () -> Void in
+                    
+                })
+                return unwindSegue
+            }
+        }
+        
+        return super.segueForUnwindingToViewController(toViewController, fromViewController: fromViewController, identifier: identifier)!
+    }
 
 }
