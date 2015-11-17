@@ -8,27 +8,36 @@
 
 import UIKit
 
-class RootTabBarController: UITabBarController {
+class RootTabBarController: UITabBarController, UISplitViewControllerDelegate {
     
     var shouldShowLogIn = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let navController = self.viewControllers?[(self.viewControllers?.count)! - 2] as! UINavigationController
+        let splitViewController = navController.viewControllers.first as! UISplitViewController
+        let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
+        navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
+        splitViewController.delegate = self
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        if shouldShowLogIn {
-            self.performSegueWithIdentifier("toLogIn", sender: self)
-            shouldShowLogIn = false
+//        if shouldShowLogIn {
+//            self.performSegueWithIdentifier("toLogIn", sender: self)
+//            shouldShowLogIn = false
+//        }
+    }
+    
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController, ontoPrimaryViewController primaryViewController:UIViewController) -> Bool {
+        guard let secondaryAsNavController = secondaryViewController as? UINavigationController else { return false }
+        guard let topAsDetailController = secondaryAsNavController.topViewController as? FinancialDetailViewController else { return false }
+        if topAsDetailController.detailItem == nil {
+            // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
+            return true
         }
+        return false
     }
     
 
