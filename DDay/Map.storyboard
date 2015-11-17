@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Map Dealer View Controller-->
@@ -20,24 +21,44 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mPp-7j-5cs">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
+                                <connections>
+                                    <outlet property="delegate" destination="OHt-lP-9qi" id="Ngt-al-4pQ"/>
+                                </connections>
                             </mapView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="qZD-6R-wRo">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="pG9-ZP-C9K"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="OHt-lP-9qi" id="cyg-Y4-UTd"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.085425122029999995" green="0.78201786269999995" blue="0.90488898750000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="qZD-6R-wRo" firstAttribute="top" secondItem="XG7-xX-2rV" secondAttribute="bottom" id="5ti-Pg-f5r"/>
+                            <constraint firstItem="qZD-6R-wRo" firstAttribute="leading" secondItem="vzl-oe-8TI" secondAttribute="leadingMargin" constant="-20" id="9Y2-2y-4PL"/>
                             <constraint firstItem="aVK-nD-xf5" firstAttribute="top" secondItem="mPp-7j-5cs" secondAttribute="bottom" id="JRI-p8-wb5"/>
                             <constraint firstItem="mPp-7j-5cs" firstAttribute="top" secondItem="vzl-oe-8TI" secondAttribute="top" id="Jgt-R2-kAr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qZD-6R-wRo" secondAttribute="trailing" constant="-20" id="Kta-Hw-1Cl"/>
                             <constraint firstItem="mPp-7j-5cs" firstAttribute="leading" secondItem="vzl-oe-8TI" secondAttribute="leading" id="R9g-8W-gYa"/>
                             <constraint firstAttribute="trailing" secondItem="mPp-7j-5cs" secondAttribute="trailing" id="y7Z-yA-x8n"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="yaI-kz-iF0"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="mapView" destination="mPp-7j-5cs" id="97L-wf-maa"/>
+                        <outlet property="searchBar" destination="qZD-6R-wRo" id="rTp-xA-0Wp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbR-WI-296" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="228" y="358"/>
+            <point key="canvasLocation" x="1040" y="358"/>
         </scene>
     </scenes>
 </document>
