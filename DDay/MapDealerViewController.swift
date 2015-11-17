@@ -49,9 +49,9 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         super.viewDidLoad()
         
         self.locationManager.requestWhenInUseAuthorization()
-        self.mapView.showsCompass = true
-        self.mapView.showsTraffic = true
-        self.mapView.showsScale = true
+        //self.mapView.showsCompass = true
+        //self.mapView.showsTraffic = true
+        //self.mapView.showsScale = true
         self.mapView.showsUserLocation = true  // we will also use mapview delegate to do a 3d flyby into user
         //self.mapView.setUserTrackingMode(MKUserTrackingMode.Follow, animated: true)
         
@@ -64,23 +64,23 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
     // MARK: - Helpers
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
@@ -129,10 +129,10 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
     
     // MARK: - MapView
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
-        //self.flyByToLocation(userLocation.location!)
+        self.flyByToLocation(userLocation.location!)
     }
     func mapViewDidStopLocatingUser(mapView: MKMapView) {
-        self.flyByToLocation(mapView.userLocation.location!)
+        //self.flyByToLocation(mapView.userLocation.location!)
     }
     
     
@@ -142,7 +142,7 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-       // print(searchBar.text)
+        // print(searchBar.text)
         
         
         // http://stackoverflow.com/questions/10417022/how-to-get-multiple-placemarks-from-clgeocoder
@@ -183,7 +183,7 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
             }
             
             
-    
+            
             
             
             
@@ -194,42 +194,42 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         /*
         
         self.geoCoder.geocodeAddressString(self.searchBar.text!) { (placemarks, error) -> Void in
-            
-            if error != nil {
-                print("Geocode failed with error: \(error!.localizedDescription)")
-            } else if placemarks?.count > 0 {
-                
-                //print(placemarks![0])
-                //print ("location.count:\(placemarks!.count)")
-                
-                let placemark = placemarks!.first as! CLPlacemark!
-                let point = MKPointAnnotation()
-                point.coordinate = placemark.location!.coordinate
-                point.title = "Sample Location";
-                point.subtitle = "Sample Subtitle";
-                
-                //print("point: \(point)")
-                
-                
-                let pointLocation = CLLocation(latitude: (placemark.location?.coordinate.latitude)!, longitude: (placemark.location?.coordinate.longitude)!)
-                //self.centerMapOnLocation(pointLocation)
-                
-                self.mapView.centerCoordinate = point.coordinate
-                
-                
-                self.mapView.addAnnotation(point)
-                
-                
-            }
-            
-            
+        
+        if error != nil {
+        print("Geocode failed with error: \(error!.localizedDescription)")
+        } else if placemarks?.count > 0 {
+        
+        //print(placemarks![0])
+        //print ("location.count:\(placemarks!.count)")
+        
+        let placemark = placemarks!.first as! CLPlacemark!
+        let point = MKPointAnnotation()
+        point.coordinate = placemark.location!.coordinate
+        point.title = "Sample Location";
+        point.subtitle = "Sample Subtitle";
+        
+        //print("point: \(point)")
+        
+        
+        let pointLocation = CLLocation(latitude: (placemark.location?.coordinate.latitude)!, longitude: (placemark.location?.coordinate.longitude)!)
+        //self.centerMapOnLocation(pointLocation)
+        
+        self.mapView.centerCoordinate = point.coordinate
+        
+        
+        self.mapView.addAnnotation(point)
+        
+        
+        }
+        
+        
         } */
     }
     
     func milesToMeters(miles: Double) -> Double {
-    // 1 mile is 1609.344 meters
-    // source: http://www.google.com/search?q=1+mile+in+meters
-    return 1609.344 * miles;
+        // 1 mile is 1609.344 meters
+        // source: http://www.google.com/search?q=1+mile+in+meters
+        return 1609.344 * miles;
     }
     
 }
