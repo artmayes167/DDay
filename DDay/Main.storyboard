@@ -14,6 +14,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fl1-aZ-at4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="dGX-lf-rO5" kind="relationship" relationship="rootViewController" id="d4i-EW-CU6"/>
@@ -34,7 +35,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Y8y-6Z-8Xs" kind="custom" identifier="toLogIn" customClass="FirstCustomSegue" customModule="DDay" customModuleProvider="target" id="wcx-OW-m1n"/>
+                        <segue destination="Y8y-6Z-8Xs" kind="custom" identifier="toLogIn" customClass="SecondCustomSegue" customModule="DDay" customModuleProvider="target" id="wcx-OW-m1n"/>
                         <segue destination="Y2S-y7-gFc" kind="relationship" relationship="viewControllers" id="Pqf-fU-a3Z"/>
                         <segue destination="Nub-RF-jip" kind="relationship" relationship="viewControllers" id="v8v-iI-los"/>
                         <segue destination="Tvi-Jv-OX2" kind="relationship" relationship="viewControllers" id="XGT-8l-dQg"/>
@@ -207,6 +208,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98b-hB-VEb">
                                         <rect key="frame" x="8" y="198" width="223" height="35"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="98b-hB-VEb" secondAttribute="height" multiplier="325:51" id="a6P-rg-J9Q"/>
                                             <constraint firstAttribute="height" constant="35" id="yHZ-6d-YHt"/>
@@ -277,7 +279,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="V4Z-Xx-giW" id="UKG-cs-p2C"/>
                         <outlet property="passwordTextField" destination="f2O-2M-3hh" id="RuF-zl-iKb"/>
-                        <segue destination="3G6-dG-Wab" kind="unwind" identifier="backToMainUnwind" customClass="FirstCustomSegueUnwind" customModule="DDay" customModuleProvider="target" unwindAction="returnFromSegueActions:" id="XsA-UP-39n"/>
+                        <segue destination="3G6-dG-Wab" kind="unwind" identifier="backToMainUnwind" customClass="SecondCustomSegueUnwind" customModule="DDay" customModuleProvider="target" unwindAction="returnFromSegueActions:" id="XsA-UP-39n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gEJ-ct-fCe" sceneMemberID="firstResponder"/>
@@ -294,6 +296,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MAG-cC-DqW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="OYf-x8-8yO" kind="relationship" relationship="rootViewController" id="Lpu-vL-6hw"/>
@@ -317,8 +320,10 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n7y-1C-ryi">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <animations/>
                             </imageView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="n7y-1C-ryi" firstAttribute="leading" secondItem="2IP-g2-bU3" secondAttribute="leading" id="FhR-h8-E2T"/>
