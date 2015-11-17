@@ -12,6 +12,8 @@
 		9C18B33A1BFBE06500E44BD3 /* SecondCustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C18B3391BFBE06500E44BD3 /* SecondCustomSegue.swift */; };
 		9C18B33C1BFBE07200E44BD3 /* SecondCustomSegueUnwind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C18B33B1BFBE07200E44BD3 /* SecondCustomSegueUnwind.swift */; };
 		9CFBC12B1BF2BF7B00982C98 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFBC12A1BF2BF7B00982C98 /* MapKit.framework */; };
+		9F4003351BFBAB89003FAB2D /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4003341BFBAB89003FAB2D /* ImagePickerViewController.swift */; };
+		9F4003371BFBAC42003FAB2D /* TakeViewPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4003361BFBAC42003FAB2D /* TakeViewPictureViewController.swift */; };
 		9F7E53E11BF294F9008391AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E53E01BF294F9008391AB /* AppDelegate.swift */; };
 		9F7E53E31BF294F9008391AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E53E21BF294F9008391AB /* ViewController.swift */; };
 		9F7E53E81BF294F9008391AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E53E71BF294F9008391AB /* Assets.xcassets */; };
@@ -63,6 +65,9 @@
 		9F7E54A11BF3CA73008391AB /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E549F1BF3CA73008391AB /* defaults.plist */; };
 		9F7E54A21BF3CA73008391AB /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E549F1BF3CA73008391AB /* defaults.plist */; };
 		9FDB7ED51BF3EC7F004A8BAB /* empty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FDB7ED41BF3EC7F004A8BAB /* empty.storyboard */; };
+		9FF30FA81BF505BF00A52AD8 /* FinancialPlan2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF30FA71BF505BF00A52AD8 /* FinancialPlan2.storyboard */; };
+		9FF30FAA1BF5067700A52AD8 /* FinancialMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF30FA91BF5067700A52AD8 /* FinancialMasterTableViewController.swift */; };
+		9FF30FCC1BF5079A00A52AD8 /* FinancialDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF30FCB1BF5079A00A52AD8 /* FinancialDetailViewController.swift */; };
 		AE989B2D43E63895D0B410DC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348869A9747B87ECEEAD643D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -117,6 +122,8 @@
 		9C18B3391BFBE06500E44BD3 /* SecondCustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondCustomSegue.swift; sourceTree = "<group>"; };
 		9C18B33B1BFBE07200E44BD3 /* SecondCustomSegueUnwind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondCustomSegueUnwind.swift; sourceTree = "<group>"; };
 		9CFBC12A1BF2BF7B00982C98 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9F4003341BFBAB89003FAB2D /* ImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
+		9F4003361BFBAC42003FAB2D /* TakeViewPictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeViewPictureViewController.swift; sourceTree = "<group>"; };
 		9F7E53DD1BF294F9008391AB /* DDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7E53E01BF294F9008391AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F7E53E21BF294F9008391AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +206,9 @@
 		9F7E549D1BF2BCF0008391AB /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		9F7E549F1BF3CA73008391AB /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaults.plist; sourceTree = "<group>"; };
 		9FDB7ED41BF3EC7F004A8BAB /* empty.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = empty.storyboard; sourceTree = "<group>"; };
+		9FF30FA71BF505BF00A52AD8 /* FinancialPlan2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FinancialPlan2.storyboard; sourceTree = "<group>"; };
+		9FF30FA91BF5067700A52AD8 /* FinancialMasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinancialMasterTableViewController.swift; sourceTree = "<group>"; };
+		9FF30FCB1BF5079A00A52AD8 /* FinancialDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinancialDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +307,11 @@
 				9F7E549B1BF2B6E3008391AB /* RootTabBarController.swift */,
 				9F7E549F1BF3CA73008391AB /* defaults.plist */,
 				9FDB7ED41BF3EC7F004A8BAB /* empty.storyboard */,
+				9FF30FA71BF505BF00A52AD8 /* FinancialPlan2.storyboard */,
+				9FF30FA91BF5067700A52AD8 /* FinancialMasterTableViewController.swift */,
+				9FF30FCB1BF5079A00A52AD8 /* FinancialDetailViewController.swift */,
+				9F4003341BFBAB89003FAB2D /* ImagePickerViewController.swift */,
+				9F4003361BFBAC42003FAB2D /* TakeViewPictureViewController.swift */,
 			);
 			path = DDay;
 			sourceTree = "<group>";
@@ -673,6 +688,7 @@
 				9FDB7ED51BF3EC7F004A8BAB /* empty.storyboard in Resources */,
 				9F7E53F61BF29525008391AB /* FinancialPlans.storyboard in Resources */,
 				9F7E53F71BF29525008391AB /* Map.storyboard in Resources */,
+				9FF30FA81BF505BF00A52AD8 /* FinancialPlan2.storyboard in Resources */,
 				9F7E53EB1BF294F9008391AB /* LaunchScreen.storyboard in Resources */,
 				9F7E53F91BF2953A008391AB /* Main.storyboard in Resources */,
 				9F7E53E81BF294F9008391AB /* Assets.xcassets in Resources */,
@@ -757,6 +773,7 @@
 			files = (
 				9F7E53E31BF294F9008391AB /* ViewController.swift in Sources */,
 				9F7E544D1BF295A6008391AB /* NSManagedObjectContext+NDAppContext.m in Sources */,
+				9F4003371BFBAC42003FAB2D /* TakeViewPictureViewController.swift in Sources */,
 				9F7E54511BF295A6008391AB /* NSString+MMString.m in Sources */,
 				9F7E545D1BF295A6008391AB /* NDDropDownViewController.m in Sources */,
 				9F7E54561BF295A6008391AB /* UIImageView+LBBlurredImage.m in Sources */,
@@ -778,6 +795,7 @@
 				9F7E54541BF295A6008391AB /* UIImage+AverageColor.m in Sources */,
 				9F7E545E1BF295A6008391AB /* NDButton.m in Sources */,
 				9F7E54631BF295A6008391AB /* MMIndicatorView.m in Sources */,
+				9F4003351BFBAB89003FAB2D /* ImagePickerViewController.swift in Sources */,
 				9F7E545B1BF295A6008391AB /* UIViewController+HelperUtilities.m in Sources */,
 				9F7E54551BF295A6008391AB /* UIImage+ImageEffects.m in Sources */,
 				9F7E549C1BF2B6E3008391AB /* RootTabBarController.swift in Sources */,
@@ -785,10 +803,12 @@
 				9F7E544F1BF295A6008391AB /* NSObject+HelperUtility.m in Sources */,
 				9F7E54651BF295A6008391AB /* LogInViewController.swift in Sources */,
 				9F7E544E1BF295A6008391AB /* NSDate+Utilities.m in Sources */,
+				9FF30FAA1BF5067700A52AD8 /* FinancialMasterTableViewController.swift in Sources */,
 				9F7E54581BF295A6008391AB /* UIImagePickerController+Utilities.m in Sources */,
 				9C18B3381BFBE05100E44BD3 /* FirstCustomSegueUnwind.swift in Sources */,
 				9F7E54591BF295A6008391AB /* UITableViewCell+MMTableViewHelper.m in Sources */,
 				9F7E54711BF29EEF008391AB /* MapDealerViewController.swift in Sources */,
+				9FF30FCC1BF5079A00A52AD8 /* FinancialDetailViewController.swift in Sources */,
 				9F7E546D1BF29E84008391AB /* DealerCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

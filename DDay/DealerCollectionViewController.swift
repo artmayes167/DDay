@@ -62,15 +62,27 @@ class DealerCollectionViewController: UICollectionViewController, UICollectionVi
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
-    
-        // Configure the cell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! DealerCell
+        
+//        cell.avatarImageView.image = UIImage(named: "")
+        cell.titleLabel.text = "Dealer #\(indexPath.item + 1)"
+        cell.subtitleLabel.text = "Specializing in ..."
     
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake((self.size.width - 30)/2, 80)
+        
+        if UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
+            return CGSizeMake((self.size.width - 30)/2, 80)
+        } else {
+            let winSize = UIApplication.sharedApplication().windows.first?.frame.size
+            if winSize?.height > winSize?.width {
+                return CGSizeMake(self.size.width - 30, 80)
+            } else {
+                return CGSizeMake((self.size.width - 30)/2, 80)
+            }
+        }
     }
 
     // MARK: UICollectionViewDelegate
@@ -98,10 +110,21 @@ class DealerCollectionViewController: UICollectionViewController, UICollectionVi
     override func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
         return false
     }
-
-    override func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
-    
-    }
     */
 
+    override func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
+    debugPrint("performAction called")
+    }
+
+
+}
+
+class DealerCell: UICollectionViewCell {
+    
+    @IBOutlet weak var avatarImageView: UIImageView!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    
+    
 }
