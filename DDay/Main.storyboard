@@ -287,11 +287,11 @@
             </objects>
             <point key="canvasLocation" x="557" y="1215"/>
         </scene>
-        <!--Pictures-->
+        <!--Schedule-->
         <scene sceneID="Ffl-Hg-eGf">
             <objects>
                 <navigationController navigationBarHidden="YES" id="nuX-fm-oY6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Pictures" image="camera" id="Yjo-KZ-Jy9"/>
+                    <tabBarItem key="tabBarItem" title="Schedule" image="cal" id="Yjo-KZ-Jy9"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MAG-cC-DqW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -299,47 +299,12 @@
                         <animations/>
                     </navigationBar>
                     <connections>
-                        <segue destination="OYf-x8-8yO" kind="relationship" relationship="rootViewController" id="Lpu-vL-6hw"/>
+                        <segue destination="QeJ-7n-Kiu" kind="relationship" relationship="rootViewController" id="xGn-5M-J5S"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAK-Z6-RnW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1357" y="1243"/>
-        </scene>
-        <!--Take View Picture View Controller-->
-        <scene sceneID="rl4-AA-9vJ">
-            <objects>
-                <viewController id="OYf-x8-8yO" customClass="TakeViewPictureViewController" customModule="DDay" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="akQ-Ze-BhX"/>
-                        <viewControllerLayoutGuide type="bottom" id="hrX-qD-cS7"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2IP-g2-bU3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n7y-1C-ryi">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                                <animations/>
-                            </imageView>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="n7y-1C-ryi" firstAttribute="leading" secondItem="2IP-g2-bU3" secondAttribute="leading" id="FhR-h8-E2T"/>
-                            <constraint firstItem="hrX-qD-cS7" firstAttribute="top" secondItem="n7y-1C-ryi" secondAttribute="bottom" id="Gfa-Ck-ZeH"/>
-                            <constraint firstItem="n7y-1C-ryi" firstAttribute="top" secondItem="2IP-g2-bU3" secondAttribute="top" id="fMb-HX-QXG"/>
-                            <constraint firstAttribute="trailing" secondItem="n7y-1C-ryi" secondAttribute="trailing" id="zNa-dI-qKg"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="IW9-Lx-tHd"/>
-                    <connections>
-                        <outlet property="chosenImage" destination="n7y-1C-ryi" id="AtJ-nL-iU5"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TTN-Oh-YfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1357" y="2010"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nie-gK-VE2">
@@ -379,9 +344,19 @@
             </objects>
             <point key="canvasLocation" x="2116" y="1194"/>
         </scene>
+        <!--Schedule-->
+        <scene sceneID="b0L-1X-RVl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Schedule" id="QeJ-7n-Kiu" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="off-ln-seo"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D9j-9z-4zh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1357" y="2010"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="camera" width="48" height="48"/>
+        <image name="cal" width="48" height="48"/>
         <image name="construction" width="120" height="120"/>
         <image name="login-linkedin" width="325" height="51"/>
     </resources>
