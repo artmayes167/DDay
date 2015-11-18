@@ -24,10 +24,10 @@ class RootTabBarController: UITabBarController, UISplitViewControllerDelegate {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-//        if shouldShowLogIn {
-//            self.performSegueWithIdentifier("toLogIn", sender: self)
-//            shouldShowLogIn = false
-//        }
+        if shouldShowLogIn {
+            self.performSegueWithIdentifier("toLogIn", sender: self)
+            shouldShowLogIn = false
+        }
     }
     
     func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController, ontoPrimaryViewController primaryViewController:UIViewController) -> Bool {

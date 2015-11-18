@@ -291,7 +291,7 @@
         <scene sceneID="Ffl-Hg-eGf">
             <objects>
                 <navigationController navigationBarHidden="YES" id="nuX-fm-oY6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Pictures" image="Camera-icon" id="Yjo-KZ-Jy9"/>
+                    <tabBarItem key="tabBarItem" title="Pictures" image="camera" id="Yjo-KZ-Jy9"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MAG-cC-DqW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -339,7 +339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTN-Oh-YfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1345" y="1886"/>
+            <point key="canvasLocation" x="1357" y="2010"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nie-gK-VE2">
@@ -381,7 +381,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Camera-icon" width="50" height="50"/>
+        <image name="camera" width="48" height="48"/>
         <image name="construction" width="120" height="120"/>
         <image name="login-linkedin" width="325" height="51"/>
     </resources>

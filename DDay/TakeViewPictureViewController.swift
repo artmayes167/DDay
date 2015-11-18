@@ -63,6 +63,11 @@ class TakeViewPictureViewController: UIViewController, UIImagePickerControllerDe
         
     }
     
+    @IBAction func closeButtonPressed(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true) { () -> Void in
+            
+        }
+    }
 
     /*
     // MARK: - Navigation

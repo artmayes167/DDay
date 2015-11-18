@@ -129,10 +129,10 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
     
     // MARK: - MapView
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
-        self.flyByToLocation(userLocation.location!)
+        //self.flyByToLocation(userLocation.location!)
     }
     func mapViewDidStopLocatingUser(mapView: MKMapView) {
-        //self.flyByToLocation(mapView.userLocation.location!)
+        self.flyByToLocation(mapView.userLocation.location!)
     }
     
     
