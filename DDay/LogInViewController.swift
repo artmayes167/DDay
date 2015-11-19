@@ -24,7 +24,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.testFingerprint()
+        //self.testFingerprint()
     }
 
     override func didReceiveMemoryWarning() {

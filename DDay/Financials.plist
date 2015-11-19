@@ -2,11 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Plan3</key>
-	<string></string>
-	<key>Plan1</key>
-	<string></string>
-	<key>Plan2</key>
-	<string></string>
+	<key>Loan</key>
+	<string>In finance, a loan is a debt provided by an entity (organization or individual) to another entity at an interest rate, and evidenced by a note which specifies, among other things, the principal amount, interest rate, and date of repayment. A loan entails the reallocation of the subject asset(s) for a period of time, between the lender and the borrower.</string>
+	<key>Operating Lease</key>
+	<string>Capital leases are similar to financial leases; however, any property purchased through a capital loan must be recorded as a taxable asset on the lessee&apos;s financial records. Whereas financial leases are non-negotiable once entered into, capital leases offer lessees more flexibility. Capital leases take into account property life, or the length of time equipment is usable. A capital lease also takes in account the ownership transfer at the end of the lease term, or rather, the transferal of the property when the payment plan has been completed. Capital leases also often consider the value of the property when determining the lease&apos;s payments, so lessees don&apos;t have to pay more than the property is worth.</string>
+	<key>Financial Lease</key>
+	<string>A financial lease is a monetary loan utilized by a corporation to purchase equipment for its business. These full-payout loans are non-negotiable once enacted, and the lessee, not the lending institution, is responsible for the maintenance of purchased equipment, as well as all relevant taxes and insurance necessary for its use. In financial leases, banks merely finance equipment for business while lessees are responsible for its upkeep.</string>
 </dict>
 </plist>

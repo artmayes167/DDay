@@ -11,6 +11,10 @@
 		9C18B3381BFBE05100E44BD3 /* FirstCustomSegueUnwind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C18B3371BFBE05100E44BD3 /* FirstCustomSegueUnwind.swift */; };
 		9C18B33A1BFBE06500E44BD3 /* SecondCustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C18B3391BFBE06500E44BD3 /* SecondCustomSegue.swift */; };
 		9C18B33C1BFBE07200E44BD3 /* SecondCustomSegueUnwind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C18B33B1BFBE07200E44BD3 /* SecondCustomSegueUnwind.swift */; };
+		9C3B31C71BFE50FA008598FA /* PulseColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B31C61BFE50FA008598FA /* PulseColors.swift */; };
+		9C3B31C91BFE5471008598FA /* Products.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3B31C81BFE5471008598FA /* Products.storyboard */; };
+		9C3B31CD1BFE55C2008598FA /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B31CC1BFE55C2008598FA /* ProductTableViewController.swift */; };
+		9C3B31CF1BFE5E5B008598FA /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B31CE1BFE5E5B008598FA /* ProductDetails.swift */; };
 		9C4986911BFD270E0010A1F0 /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4986901BFD270E0010A1F0 /* Schedule.storyboard */; };
 		9C4986951BFD2A4B0010A1F0 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4986941BFD2A4B0010A1F0 /* ScheduleTableViewController.swift */; };
 		9C97631A1BFE1BFF003DEA65 /* Financials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9763191BFE1BFE003DEA65 /* Financials.plist */; };
@@ -129,6 +133,10 @@
 		9C18B3371BFBE05100E44BD3 /* FirstCustomSegueUnwind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCustomSegueUnwind.swift; sourceTree = "<group>"; };
 		9C18B3391BFBE06500E44BD3 /* SecondCustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondCustomSegue.swift; sourceTree = "<group>"; };
 		9C18B33B1BFBE07200E44BD3 /* SecondCustomSegueUnwind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondCustomSegueUnwind.swift; sourceTree = "<group>"; };
+		9C3B31C61BFE50FA008598FA /* PulseColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseColors.swift; sourceTree = "<group>"; };
+		9C3B31C81BFE5471008598FA /* Products.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Products.storyboard; sourceTree = "<group>"; };
+		9C3B31CC1BFE55C2008598FA /* ProductTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
+		9C3B31CE1BFE5E5B008598FA /* ProductDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
 		9C4986901BFD270E0010A1F0 /* Schedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
 		9C4986941BFD2A4B0010A1F0 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
 		9C9763191BFE1BFE003DEA65 /* Financials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Financials.plist; sourceTree = "<group>"; };
@@ -278,6 +286,15 @@
 			name = "Custom Segues";
 			sourceTree = "<group>";
 		};
+		9C3B31CA1BFE559F008598FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C3B31CC1BFE55C2008598FA /* ProductTableViewController.swift */,
+				9C3B31CE1BFE5E5B008598FA /* ProductDetails.swift */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9F7E53D41BF294F9008391AB = {
 			isa = PBXGroup;
 			children = (
@@ -303,11 +320,13 @@
 		9F7E53DF1BF294F9008391AB /* DDay */ = {
 			isa = PBXGroup;
 			children = (
+				9C3B31CA1BFE559F008598FA /* Products */,
 				9C18B3341BFBE02200E44BD3 /* Custom Segues */,
 				9F7E53FA1BF295A6008391AB /* HelplerUtilities */,
 				9F7E544B1BF295A6008391AB /* NDDatePicker.xib */,
 				9FC787D81BFE2D5800F4FF2A /* Storyboards */,
 				9F7E53E01BF294F9008391AB /* AppDelegate.swift */,
+				9C3B31C61BFE50FA008598FA /* PulseColors.swift */,
 				9F7E53E21BF294F9008391AB /* ViewController.swift */,
 				9F7E53E71BF294F9008391AB /* Assets.xcassets */,
 				9F7E53EC1BF294F9008391AB /* Info.plist */,
@@ -602,6 +621,7 @@
 				9FC787D91BFE2D7E00F4FF2A /* Demo1.storyboard */,
 				9FC787DB1BFE2D8A00F4FF2A /* Demo2.storyboard */,
 				9FC787DD1BFE2D9400F4FF2A /* Demo3.storyboard */,
+				9C3B31C81BFE5471008598FA /* Products.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -723,6 +743,7 @@
 				9FC787DA1BFE2D7E00F4FF2A /* Demo1.storyboard in Resources */,
 				9C97631A1BFE1BFF003DEA65 /* Financials.plist in Resources */,
 				9F7E53F71BF29525008391AB /* Map.storyboard in Resources */,
+				9C3B31C91BFE5471008598FA /* Products.storyboard in Resources */,
 				9FC787DC1BFE2D8A00F4FF2A /* Demo2.storyboard in Resources */,
 				9FF30FA81BF505BF00A52AD8 /* FinancialPlan2.storyboard in Resources */,
 				9C4986911BFD270E0010A1F0 /* Schedule.storyboard in Resources */,
@@ -816,6 +837,7 @@
 				9F7E54511BF295A6008391AB /* NSString+MMString.m in Sources */,
 				9F7E545D1BF295A6008391AB /* NDDropDownViewController.m in Sources */,
 				9F7E54561BF295A6008391AB /* UIImageView+LBBlurredImage.m in Sources */,
+				9C3B31CF1BFE5E5B008598FA /* ProductDetails.swift in Sources */,
 				9F7E54611BF295A6008391AB /* MMKeychainWrapper.m in Sources */,
 				9F7E54501BF295A6008391AB /* NSDictionary+MMDictionary.m in Sources */,
 				9F7E545C1BF295A6008391AB /* NDDatePickerViewController.m in Sources */,
@@ -835,6 +857,7 @@
 				9F7E54521BF295A6008391AB /* UIColor+HexColor.m in Sources */,
 				9F7E54541BF295A6008391AB /* UIImage+AverageColor.m in Sources */,
 				9F7E545E1BF295A6008391AB /* NDButton.m in Sources */,
+				9C3B31CD1BFE55C2008598FA /* ProductTableViewController.swift in Sources */,
 				9F7E54631BF295A6008391AB /* MMIndicatorView.m in Sources */,
 				9F4003351BFBAB89003FAB2D /* ImagePickerViewController.swift in Sources */,
 				9F7E545B1BF295A6008391AB /* UIViewController+HelperUtilities.m in Sources */,
@@ -851,6 +874,7 @@
 				9F7E54711BF29EEF008391AB /* MapDealerViewController.swift in Sources */,
 				9FF30FCC1BF5079A00A52AD8 /* FinancialDetailViewController.swift in Sources */,
 				9F7E546D1BF29E84008391AB /* DealerCollectionViewController.swift in Sources */,
+				9C3B31C71BFE50FA008598FA /* PulseColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -993,6 +1017,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.accenture.DDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1007,6 +1032,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.accenture.DDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

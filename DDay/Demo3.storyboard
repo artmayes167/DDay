@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -13,6 +13,7 @@
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="EDO-9j-5Ji">
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
@@ -56,6 +57,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="89a-6n-QN7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="IAA-yd-cIx" kind="relationship" relationship="rootViewController" id="UwZ-xv-XXs"/>
@@ -90,17 +92,21 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="construction" translatesAutoresizingMaskIntoConstraints="NO" id="ELR-yJ-mia">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zmk-K8-MSj">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="OXA-vh-VlK">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <animations/>
                                 </view>
+                                <animations/>
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-Day" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zex-JN-ZIc">
                                 <rect key="frame" x="55" y="28" width="490" height="91"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="91" id="5PI-qE-i7g"/>
                                     <constraint firstAttribute="width" constant="490" id="phe-XB-AsT"/>
@@ -117,11 +123,14 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="48y-dp-JMa">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="260"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <animations/>
                                         </view>
+                                        <animations/>
                                         <blurEffect style="light"/>
                                     </visualEffectView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnv-kn-xyf">
                                         <rect key="frame" x="8" y="32" width="224" height="21"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="LjM-Kf-ANi"/>
                                         </constraints>
@@ -131,6 +140,7 @@
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="31x-u1-SY9">
                                         <rect key="frame" x="20" y="74" width="200" height="30"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="fzW-Jc-92M"/>
                                         </constraints>
@@ -142,6 +152,7 @@
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c4W-oz-cbB">
                                         <rect key="frame" x="20" y="112" width="200" height="30"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="tGg-tR-OIh"/>
                                         </constraints>
@@ -153,6 +164,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7RG-bj-dGy">
                                         <rect key="frame" x="27" y="150" width="185" height="40"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="7RG-bj-dGy" secondAttribute="height" multiplier="60:13" id="5Ps-jT-d82"/>
                                             <constraint firstAttribute="height" constant="40" id="QUM-wQ-Z7F"/>
@@ -166,6 +178,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCF-LZ-lf5">
                                         <rect key="frame" x="8" y="198" width="223" height="35"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="fCF-LZ-lf5" secondAttribute="height" multiplier="325:51" id="ib2-TW-bSw"/>
                                             <constraint firstAttribute="height" constant="35" id="liF-9o-zAb"/>
@@ -178,6 +191,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="c4W-oz-cbB" firstAttribute="leading" secondItem="JIJ-Vb-9SV" secondAttribute="leading" constant="20" id="3GA-Z7-Yc4"/>
@@ -215,6 +229,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JIJ-Vb-9SV" firstAttribute="centerY" secondItem="BvR-c9-ihC" secondAttribute="centerY" id="4Zx-zL-9f4"/>
@@ -251,6 +266,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CIR-e2-VI5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="gN5-uj-s6W" kind="relationship" relationship="rootViewController" id="j9e-5P-DKZ"/>
@@ -269,6 +285,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PeI-Sb-dv5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="fgH-GU-uJh" kind="relationship" relationship="rootViewController" id="5hY-1k-8hI"/>
@@ -287,6 +304,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HxN-jo-jFr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="F6c-gP-xdR" kind="relationship" relationship="rootViewController" id="V8v-hh-fhV"/>
