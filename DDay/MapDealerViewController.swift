@@ -250,4 +250,10 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         return 1609.344 * miles;
     }
     
+    
+    
+    func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        self.searchBar.resignFirstResponder()
+    }
+    
 }
