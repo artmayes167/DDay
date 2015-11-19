@@ -444,5 +444,5 @@
         <image name="login-linkedin" width="48" height="48"/>
         <image name="tracktor" width="48" height="48"/>
     </resources>
-    <color key="tintColor" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="0.20284231085526316" green="0.95821340460526316" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

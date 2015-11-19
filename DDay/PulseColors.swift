@@ -57,9 +57,9 @@ let profileImageBezierColor = UIColor(red: 144.0/255.0, green: 172.0/255.0,   bl
 let profileInitialsBackgroundColor = UIColor(red: 51.0/255.0, green: 51.0/255.0,   blue: 51.0/255.0, alpha: 1)
 
 class GradientColors {
-    let colorTop = UIColor(red: 49.0/255.0, green: 96.0/255.0, blue: 171.0/255.0, alpha: 1.0).CGColor
+    let colorTop = UIColor(red: 0.0/255, green: 153.0/255, blue: 255.0/255, alpha: 1).CGColor
 
-    let colorBottom = UIColor(red: 0.0/255.0, green: 187.0/255.0, blue: 229.0/255.0, alpha: 1.0).CGColor
+    let colorBottom = UIColor(red: 52.0/255.0, green: 244.0/255.0, blue: 255.0/255.0, alpha: 1.0).CGColor
 
     
     let gl: CAGradientLayer

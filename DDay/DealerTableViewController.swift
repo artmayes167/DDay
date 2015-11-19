@@ -12,7 +12,7 @@ class DealerTableViewController: UITableViewController {
 
     
     let dealers = ["John Deere", "Mahindra", "Ricoh"]
-    let profileStrings = ["https://www.linkedin.com/company/john-deere-financial?trk=rr-affiliated-mod","https://www.linkedin.com/company/tech-mahindra?trk=company_logo","https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fricoh-company-ltd-"]
+    let profileStrings = ["https://www.linkedin.com/company/john-deere-financial?trk=rr-affiliated-mod","https://www.linkedin.com/company/tech-mahindra?trk=company_logo","https://www.linkedin.com/company/ricoh-netherlands"]
     
     
     override func viewDidLoad() {
@@ -23,6 +23,16 @@ class DealerTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        
+        // set gradient background
+        let colors = GradientColors()
+        view.backgroundColor = UIColor.clearColor()
+        let backgroundLayer = colors.gl
+        backgroundLayer.frame = view.frame
+        view.layer.insertSublayer(backgroundLayer, atIndex: 0)
+        
+        self.tableView.backgroundColor = UIColor.clearColor()
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,7 +60,7 @@ class DealerTableViewController: UITableViewController {
         
         label.text = self.dealers[indexPath.row] as String
         
-
+        cell.backgroundColor = UIColor.clearColor()
         return cell
     }
     

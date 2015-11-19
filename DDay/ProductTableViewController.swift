@@ -19,6 +19,20 @@ class ProductTableViewController: UITableViewController {
 
         
         
+        
+        
+        
+        // set gradient background
+        let colors = GradientColors()
+        view.backgroundColor = UIColor.clearColor()
+        let backgroundLayer = colors.gl
+        backgroundLayer.frame = view.frame
+        view.layer.insertSublayer(backgroundLayer, atIndex: 0)
+        
+        self.tableView.backgroundColor = UIColor.clearColor()
+        
+        
+        
         if let path = NSBundle.mainBundle().pathForResource("Financials", ofType: "plist") {
             self.financialsDictionary = NSDictionary(contentsOfFile: path)
         }
@@ -60,7 +74,7 @@ class ProductTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("ProductCell", forIndexPath: indexPath)
         
         cell.textLabel?.text = self.sortedFiancials[indexPath.row]
-
+        cell.backgroundColor = UIColor.clearColor()
 
         return cell
     }

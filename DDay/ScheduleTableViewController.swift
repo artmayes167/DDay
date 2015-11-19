@@ -27,6 +27,19 @@ class ScheduleTableViewController: UITableViewController, UITextFieldDelegate {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        
+        
+        // set gradient background
+        let colors = GradientColors()
+        view.backgroundColor = UIColor.clearColor()
+        let backgroundLayer = colors.gl
+        backgroundLayer.frame = view.frame
+        view.layer.insertSublayer(backgroundLayer, atIndex: 0)
+        
+        self.tableView.backgroundColor = UIColor.clearColor()
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
