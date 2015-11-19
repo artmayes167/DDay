@@ -27,6 +27,18 @@ class FinancialPlansViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var myDict: NSDictionary?
+        if let path = NSBundle.mainBundle().pathForResource("Financials", ofType: "plist") {
+            myDict = NSDictionary(contentsOfFile: path)
+        }
+        if let dict = myDict {
+            // Use your dict here
+        }
+        
+        
+        
+        
 
         // Do any additional setup after loading the view.
     }
