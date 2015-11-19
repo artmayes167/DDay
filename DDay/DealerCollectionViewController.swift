@@ -13,7 +13,7 @@ private let reuseIdentifier = "basic"
 class DealerCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var size : CGSize = CGSizeZero
-    let industries = ["Food", "Agriculture", "Office technology", "Healthcare", "Clean technology", "Construction", "Transportation", "Industrial"]
+    let dealers = ["John Deere", "Mahindra", "Ricoh"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +64,7 @@ class DealerCollectionViewController: UICollectionViewController, UICollectionVi
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! DealerCell
         
 //        cell.avatarImageView.image = UIImage(named: "")
-        cell.titleLabel.text = self.industries[indexPath.item]
+        //cell.titleLabel.text = self.industries[indexPath.item]
 //        cell.subtitleLabel.text = "Specializing in ..."
     
         return cell

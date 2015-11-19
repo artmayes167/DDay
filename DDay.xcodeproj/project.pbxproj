@@ -15,6 +15,8 @@
 		9C3B31C91BFE5471008598FA /* Products.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3B31C81BFE5471008598FA /* Products.storyboard */; };
 		9C3B31CD1BFE55C2008598FA /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B31CC1BFE55C2008598FA /* ProductTableViewController.swift */; };
 		9C3B31CF1BFE5E5B008598FA /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B31CE1BFE5E5B008598FA /* ProductDetails.swift */; };
+		9C3B31D21BFE6734008598FA /* DealerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B31D11BFE6734008598FA /* DealerTableViewController.swift */; };
+		9C3B31D41BFE6CB1008598FA /* DealerLinkedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B31D31BFE6CB1008598FA /* DealerLinkedInViewController.swift */; };
 		9C4986911BFD270E0010A1F0 /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4986901BFD270E0010A1F0 /* Schedule.storyboard */; };
 		9C4986951BFD2A4B0010A1F0 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4986941BFD2A4B0010A1F0 /* ScheduleTableViewController.swift */; };
 		9C97631A1BFE1BFF003DEA65 /* Financials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9763191BFE1BFE003DEA65 /* Financials.plist */; };
@@ -137,6 +139,8 @@
 		9C3B31C81BFE5471008598FA /* Products.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Products.storyboard; sourceTree = "<group>"; };
 		9C3B31CC1BFE55C2008598FA /* ProductTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
 		9C3B31CE1BFE5E5B008598FA /* ProductDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
+		9C3B31D11BFE6734008598FA /* DealerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerTableViewController.swift; sourceTree = "<group>"; };
+		9C3B31D31BFE6CB1008598FA /* DealerLinkedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerLinkedInViewController.swift; sourceTree = "<group>"; };
 		9C4986901BFD270E0010A1F0 /* Schedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
 		9C4986941BFD2A4B0010A1F0 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
 		9C9763191BFE1BFE003DEA65 /* Financials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Financials.plist; sourceTree = "<group>"; };
@@ -295,6 +299,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9C3B31D01BFE6724008598FA /* Dealer */ = {
+			isa = PBXGroup;
+			children = (
+				9C3B31D11BFE6734008598FA /* DealerTableViewController.swift */,
+				9C3B31D31BFE6CB1008598FA /* DealerLinkedInViewController.swift */,
+			);
+			name = Dealer;
+			sourceTree = "<group>";
+		};
 		9F7E53D41BF294F9008391AB = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +333,7 @@
 		9F7E53DF1BF294F9008391AB /* DDay */ = {
 			isa = PBXGroup;
 			children = (
+				9C3B31D01BFE6724008598FA /* Dealer */,
 				9C3B31CA1BFE559F008598FA /* Products */,
 				9C18B3341BFBE02200E44BD3 /* Custom Segues */,
 				9F7E53FA1BF295A6008391AB /* HelplerUtilities */,
@@ -839,6 +853,7 @@
 				9F7E54561BF295A6008391AB /* UIImageView+LBBlurredImage.m in Sources */,
 				9C3B31CF1BFE5E5B008598FA /* ProductDetails.swift in Sources */,
 				9F7E54611BF295A6008391AB /* MMKeychainWrapper.m in Sources */,
+				9C3B31D21BFE6734008598FA /* DealerTableViewController.swift in Sources */,
 				9F7E54501BF295A6008391AB /* NSDictionary+MMDictionary.m in Sources */,
 				9F7E545C1BF295A6008391AB /* NDDatePickerViewController.m in Sources */,
 				9F7E545A1BF295A6008391AB /* UIView+HelperUtility.m in Sources */,
@@ -863,6 +878,7 @@
 				9F7E545B1BF295A6008391AB /* UIViewController+HelperUtilities.m in Sources */,
 				9F7E54551BF295A6008391AB /* UIImage+ImageEffects.m in Sources */,
 				9F7E549C1BF2B6E3008391AB /* RootTabBarController.swift in Sources */,
+				9C3B31D41BFE6CB1008598FA /* DealerLinkedInViewController.swift in Sources */,
 				9F7E544C1BF295A6008391AB /* NSManagedObject+NDAppManagedObject.m in Sources */,
 				9F7E544F1BF295A6008391AB /* NSObject+HelperUtility.m in Sources */,
 				9F7E54651BF295A6008391AB /* LogInViewController.swift in Sources */,
