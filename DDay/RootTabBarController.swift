@@ -15,11 +15,11 @@ class RootTabBarController: UITabBarController, UISplitViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let navController = self.viewControllers?[(self.viewControllers?.count)! - 2] as! UINavigationController
-        let splitViewController = navController.viewControllers.first as! UISplitViewController
-        let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
-        navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
-        splitViewController.delegate = self
+//        let navController = self.viewControllers?[(self.viewControllers?.count)! - 2] as! UINavigationController
+//        let splitViewController = navController.viewControllers.first as! UISplitViewController
+//        let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
+//        navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
+//        splitViewController.delegate = self
     }
     
     override func viewDidAppear(animated: Bool) {
