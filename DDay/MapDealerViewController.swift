@@ -226,6 +226,24 @@ class MapDealerViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         } */
     }
     
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+        
+        let tapGuesture = UITapGestureRecognizer(target: self, action: "calloutTaped:")
+        view.addGestureRecognizer(tapGuesture)
+        
+        let coordinate = view.annotation?.coordinate
+        let pinLocation = CLLocation(latitude: (coordinate?.latitude)!, longitude: (coordinate?.longitude)!)
+        self.flyByToLocation(pinLocation)
+        
+        
+    }
+    
+    
+    func calloutTaped(sender:AnyObject) {
+        
+    }
+    
+    
     func milesToMeters(miles: Double) -> Double {
         // 1 mile is 1609.344 meters
         // source: http://www.google.com/search?q=1+mile+in+meters
