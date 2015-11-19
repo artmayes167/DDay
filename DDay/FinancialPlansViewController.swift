@@ -15,7 +15,7 @@ class FinancialPlansViewController: UIViewController, UITableViewDataSource, UIT
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var tableTitleLabel: UILabel!
     
-    
+    var sortedFiancials = [String]()
     
     @IBOutlet weak var financialTitleLabel: UILabel!
     let items = ["Operating Leases", "Capital Leases", "Cost-Per-Test", "Step Payments", "Deferred Payments", "Progress Payments", "Software Financing", "Customized Solutions"]
@@ -26,6 +26,18 @@ class FinancialPlansViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var myDict: NSDictionary?
+        if let path = NSBundle.mainBundle().pathForResource("Financials", ofType: "plist") {
+            myDict = NSDictionary(contentsOfFile: path)
+        }
+        
+        let financialsArray = myDict?.allKeys as! [String]
+        self.sortedFiancials = financialsArray.sort { $0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending }
+        
+        
+        
+        print("sorted:\(self.sortedFiancials)")
 
         // Do any additional setup after loading the view.
     }
@@ -92,12 +104,12 @@ class FinancialPlansViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return self.sortedFiancials.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell")!
-        cell.textLabel?.text = items[indexPath.row];
+        cell.textLabel?.text = self.sortedFiancials[indexPath.row];
         return cell
     }
     

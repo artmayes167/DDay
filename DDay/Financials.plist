@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   Financials.plist
-   DDay
-
-   Created by Terry Wang on 11/19/15.
-   Copyright (c) 2015 Accenture. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<dict>
+	<key>Plan3</key>
+	<string></string>
+	<key>Plan1</key>
+	<string></string>
+	<key>Plan2</key>
+	<string></string>
+</dict>
 </plist>
