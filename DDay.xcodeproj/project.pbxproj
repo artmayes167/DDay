@@ -66,6 +66,7 @@
 		9F7E54A01BF3CA73008391AB /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E549F1BF3CA73008391AB /* defaults.plist */; };
 		9F7E54A11BF3CA73008391AB /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E549F1BF3CA73008391AB /* defaults.plist */; };
 		9F7E54A21BF3CA73008391AB /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E549F1BF3CA73008391AB /* defaults.plist */; };
+		9FC787D51BFD99BD00F4FF2A /* DealerDetailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC787D41BFD99BD00F4FF2A /* DealerDetailCollectionViewController.swift */; };
 		9FDB7ED51BF3EC7F004A8BAB /* empty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FDB7ED41BF3EC7F004A8BAB /* empty.storyboard */; };
 		9FF30FA81BF505BF00A52AD8 /* FinancialPlan2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF30FA71BF505BF00A52AD8 /* FinancialPlan2.storyboard */; };
 		9FF30FAA1BF5067700A52AD8 /* FinancialMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF30FA91BF5067700A52AD8 /* FinancialMasterTableViewController.swift */; };
@@ -209,6 +210,7 @@
 		9F7E549B1BF2B6E3008391AB /* RootTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		9F7E549D1BF2BCF0008391AB /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		9F7E549F1BF3CA73008391AB /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaults.plist; sourceTree = "<group>"; };
+		9FC787D41BFD99BD00F4FF2A /* DealerDetailCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerDetailCollectionViewController.swift; sourceTree = "<group>"; };
 		9FDB7ED41BF3EC7F004A8BAB /* empty.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = empty.storyboard; sourceTree = "<group>"; };
 		9FF30FA71BF505BF00A52AD8 /* FinancialPlan2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FinancialPlan2.storyboard; sourceTree = "<group>"; };
 		9FF30FA91BF5067700A52AD8 /* FinancialMasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinancialMasterTableViewController.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 				9F4003341BFBAB89003FAB2D /* ImagePickerViewController.swift */,
 				9F4003361BFBAC42003FAB2D /* TakeViewPictureViewController.swift */,
 				9C4986941BFD2A4B0010A1F0 /* ScheduleTableViewController.swift */,
+				9FC787D41BFD99BD00F4FF2A /* DealerDetailCollectionViewController.swift */,
 			);
 			path = DDay;
 			sourceTree = "<group>";
@@ -796,6 +799,7 @@
 				9F7E54621BF295A6008391AB /* RASImageView.m in Sources */,
 				9C18B3361BFBE03E00E44BD3 /* FirstCustomSegue.swift in Sources */,
 				9C4986951BFD2A4B0010A1F0 /* ScheduleTableViewController.swift in Sources */,
+				9FC787D51BFD99BD00F4FF2A /* DealerDetailCollectionViewController.swift in Sources */,
 				9C18B33C1BFBE07200E44BD3 /* SecondCustomSegueUnwind.swift in Sources */,
 				9F7E54531BF295A6008391AB /* RASImageCache.m in Sources */,
 				9F7E54571BF295A6008391AB /* UIImageView+Loading.m in Sources */,

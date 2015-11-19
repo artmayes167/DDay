@@ -12,6 +12,7 @@
 #import "Styles.h"
 #import "TheAnimator.h"
 #import "NSDate+Utilities.h"
+#import "UIColor+HexColor.h"
 
 
 #endif /* DDay_Bridging_Header_h */

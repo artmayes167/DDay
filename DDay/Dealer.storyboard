@@ -30,42 +30,18 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpx-My-aM1" customClass="NDView">
                                             <rect key="frame" x="0.0" y="0.0" width="282" height="80"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="qHG-MY-Tq0">
-                                                    <rect key="frame" x="9" y="18" width="44" height="44"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="44" id="LEV-JK-5sS"/>
-                                                        <constraint firstAttribute="height" constant="44" id="mdw-As-okT"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyb-6r-ugQ">
-                                                    <rect key="frame" x="61" y="15" width="213" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="eeo-PX-DzC"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="8" y="24.5" width="266" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <color key="textColor" red="0.0" green="0.058741220810000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeO-ku-5ec">
-                                                    <rect key="frame" x="61" y="44" width="213" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="4i0-Xm-Uom"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="dyb-6r-ugQ" secondAttribute="trailing" constant="8" id="2jG-8m-Ccb"/>
-                                                <constraint firstItem="WeO-ku-5ec" firstAttribute="leading" secondItem="qHG-MY-Tq0" secondAttribute="trailing" constant="8" id="3VO-7s-3W5"/>
-                                                <constraint firstAttribute="trailing" secondItem="WeO-ku-5ec" secondAttribute="trailing" constant="8" id="I7a-Ue-Xsz"/>
-                                                <constraint firstItem="WeO-ku-5ec" firstAttribute="centerY" secondItem="kpx-My-aM1" secondAttribute="centerY" constant="14" id="NnI-h8-C1f"/>
-                                                <constraint firstItem="qHG-MY-Tq0" firstAttribute="leading" secondItem="kpx-My-aM1" secondAttribute="leading" constant="9" id="PMO-nR-gxA"/>
-                                                <constraint firstItem="WeO-ku-5ec" firstAttribute="top" secondItem="dyb-6r-ugQ" secondAttribute="bottom" constant="8" id="Vac-vt-CgS"/>
-                                                <constraint firstItem="qHG-MY-Tq0" firstAttribute="centerY" secondItem="kpx-My-aM1" secondAttribute="centerY" id="koi-tO-UW5"/>
-                                                <constraint firstItem="dyb-6r-ugQ" firstAttribute="leading" secondItem="qHG-MY-Tq0" secondAttribute="trailing" constant="8" id="s5i-E2-FKR"/>
+                                                <constraint firstItem="dyb-6r-ugQ" firstAttribute="leading" secondItem="kpx-My-aM1" secondAttribute="leading" constant="8" id="dxf-Kt-HGx"/>
+                                                <constraint firstItem="dyb-6r-ugQ" firstAttribute="centerY" secondItem="kpx-My-aM1" secondAttribute="centerY" id="s0D-nT-D9c"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -90,10 +66,8 @@
                                     <constraint firstAttribute="bottom" secondItem="kpx-My-aM1" secondAttribute="bottom" id="zvN-NL-W2Z"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="avatarImageView" destination="qHG-MY-Tq0" id="VcE-iK-UW1"/>
-                                    <outlet property="subtitleLabel" destination="WeO-ku-5ec" id="vUe-de-CYg"/>
                                     <outlet property="titleLabel" destination="dyb-6r-ugQ" id="REH-Md-jOL"/>
-                                    <segue destination="3DQ-tR-yQ7" kind="show" id="Trp-Dn-1Ph"/>
+                                    <segue destination="5Jw-Fa-JTa" kind="show" identifier="toSelection" id="W6y-Us-adx"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
