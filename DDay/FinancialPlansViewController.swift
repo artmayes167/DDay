@@ -15,6 +15,7 @@ class FinancialPlansViewController: UIViewController, UITableViewDataSource, UIT
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var tableTitleLabel: UILabel!
     
+    @IBOutlet weak var webView: UIWebView!
     
     
     @IBOutlet weak var financialTitleLabel: UILabel!
