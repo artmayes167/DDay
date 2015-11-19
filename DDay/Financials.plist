@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Customized Solutions</key>
+	<string></string>
+	<key>Software Financing</key>
+	<string></string>
+	<key>Progress Payments</key>
+	<string></string>
+	<key>Deferred Payments</key>
+	<string></string>
+	<key>Step Payments</key>
+	<string></string>
+	<key>Cost-Per-Test</key>
+	<string></string>
+	<key>Operating Leases</key>
+	<string></string>
+	<key>Captal Leases</key>
+	<string></string>
+</dict>
+</plist>
