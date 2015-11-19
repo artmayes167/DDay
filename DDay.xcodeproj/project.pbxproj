@@ -13,6 +13,7 @@
 		9C18B33C1BFBE07200E44BD3 /* SecondCustomSegueUnwind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C18B33B1BFBE07200E44BD3 /* SecondCustomSegueUnwind.swift */; };
 		9C4986911BFD270E0010A1F0 /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4986901BFD270E0010A1F0 /* Schedule.storyboard */; };
 		9C4986951BFD2A4B0010A1F0 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4986941BFD2A4B0010A1F0 /* ScheduleTableViewController.swift */; };
+		9C9763181BFD9721003DEA65 /* Financials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9763171BFD9721003DEA65 /* Financials.plist */; };
 		9CFBC12B1BF2BF7B00982C98 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFBC12A1BF2BF7B00982C98 /* MapKit.framework */; };
 		9F4003351BFBAB89003FAB2D /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4003341BFBAB89003FAB2D /* ImagePickerViewController.swift */; };
 		9F4003371BFBAC42003FAB2D /* TakeViewPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4003361BFBAC42003FAB2D /* TakeViewPictureViewController.swift */; };
@@ -125,6 +126,7 @@
 		9C18B33B1BFBE07200E44BD3 /* SecondCustomSegueUnwind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondCustomSegueUnwind.swift; sourceTree = "<group>"; };
 		9C4986901BFD270E0010A1F0 /* Schedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
 		9C4986941BFD2A4B0010A1F0 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
+		9C9763171BFD9721003DEA65 /* Financials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Financials.plist; sourceTree = "<group>"; };
 		9CFBC12A1BF2BF7B00982C98 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9F4003341BFBAB89003FAB2D /* ImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		9F4003361BFBAC42003FAB2D /* TakeViewPictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeViewPictureViewController.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 				9F4003341BFBAB89003FAB2D /* ImagePickerViewController.swift */,
 				9F4003361BFBAC42003FAB2D /* TakeViewPictureViewController.swift */,
 				9C4986941BFD2A4B0010A1F0 /* ScheduleTableViewController.swift */,
+				9C9763171BFD9721003DEA65 /* Financials.plist */,
 			);
 			path = DDay;
 			sourceTree = "<group>";
@@ -697,6 +700,7 @@
 				9F7E53F71BF29525008391AB /* Map.storyboard in Resources */,
 				9FF30FA81BF505BF00A52AD8 /* FinancialPlan2.storyboard in Resources */,
 				9C4986911BFD270E0010A1F0 /* Schedule.storyboard in Resources */,
+				9C9763181BFD9721003DEA65 /* Financials.plist in Resources */,
 				9F7E53EB1BF294F9008391AB /* LaunchScreen.storyboard in Resources */,
 				9F7E53F91BF2953A008391AB /* Main.storyboard in Resources */,
 				9F7E53E81BF294F9008391AB /* Assets.xcassets in Resources */,
