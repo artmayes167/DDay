@@ -113,8 +113,20 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dllbanner" translatesAutoresizingMaskIntoConstraints="NO" id="n2E-D7-b6y">
+                                                    <rect key="frame" x="-2" y="270" width="280" height="100"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="cDb-Hw-al5"/>
+                                                        <constraint firstAttribute="width" constant="280" id="fxW-nL-ldg"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstItem="n2E-D7-b6y" firstAttribute="centerY" secondItem="jJo-nq-KyC" secondAttribute="centerY" constant="120" id="691-mk-UXN"/>
+                                                <constraint firstItem="n2E-D7-b6y" firstAttribute="centerX" secondItem="jJo-nq-KyC" secondAttribute="centerX" constant="-2" id="QH3-k0-ZJI"/>
+                                            </constraints>
                                         </view>
                                         <animations/>
                                         <blurEffect style="light"/>
@@ -427,6 +439,7 @@
     <resources>
         <image name="cal" width="48" height="48"/>
         <image name="construction" width="120" height="120"/>
+        <image name="dllbanner" width="300" height="96"/>
         <image name="list" width="32" height="32"/>
         <image name="login-linkedin" width="48" height="48"/>
         <image name="tracktor" width="48" height="48"/>
