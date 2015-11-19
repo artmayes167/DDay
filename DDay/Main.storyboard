@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oRD-Ow-NI8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oRD-Ow-NI8">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -39,7 +39,6 @@
                         <segue destination="Y2S-y7-gFc" kind="relationship" relationship="viewControllers" id="Pqf-fU-a3Z"/>
                         <segue destination="Nub-RF-jip" kind="relationship" relationship="viewControllers" id="v8v-iI-los"/>
                         <segue destination="Tvi-Jv-OX2" kind="relationship" relationship="viewControllers" id="XGT-8l-dQg"/>
-                        <segue destination="n5B-Pp-9KO" kind="relationship" relationship="viewControllers" id="88h-IA-N39"/>
                         <segue destination="nuX-fm-oY6" kind="relationship" relationship="viewControllers" id="V90-Ej-Gfz"/>
                     </connections>
                 </tabBarController>
