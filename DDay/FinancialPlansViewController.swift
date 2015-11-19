@@ -15,6 +15,7 @@ class FinancialPlansViewController: UIViewController, UITableViewDataSource, UIT
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var tableTitleLabel: UILabel!
     
+    var financialsDictionary:NSDictionary!
     var sortedFiancials = [String]()
     
     @IBOutlet weak var financialTitleLabel: UILabel!
@@ -27,15 +28,12 @@ class FinancialPlansViewController: UIViewController, UITableViewDataSource, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var myDict: NSDictionary?
         if let path = NSBundle.mainBundle().pathForResource("Financials", ofType: "plist") {
-            myDict = NSDictionary(contentsOfFile: path)
+            self.financialsDictionary = NSDictionary(contentsOfFile: path)
         }
         
-        let financialsArray = myDict?.allKeys as! [String]
+        let financialsArray = financialsDictionary?.allKeys as! [String]
         self.sortedFiancials = financialsArray.sort { $0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending }
-        
-        
         
         print("sorted:\(self.sortedFiancials)")
 
